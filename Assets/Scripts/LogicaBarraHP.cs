@@ -11,7 +11,7 @@ public class LogicaBarraHP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidaActual = vidaMax;
+        vidaActual = vidaMax - 5;
     }
 
     // Update is called once per frame
@@ -32,5 +32,13 @@ public class LogicaBarraHP : MonoBehaviour
     public void RevisarVida()
     {
         ImagenBarraVida.fillAmount = vidaActual / vidaMax;
+    }
+
+    void OnTriggerEnter(Collider coll)
+    {
+        if (coll.CompareTag("Arma"))
+        {
+            vidaActual = vidaActual - 3;
+        }
     }
 }

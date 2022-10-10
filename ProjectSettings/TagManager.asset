@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Object
+  - Terrain
+  - Arma
+  - ArmaPlayer
+  - Enemy
   layers:
   - Default
   - TransparentFX
